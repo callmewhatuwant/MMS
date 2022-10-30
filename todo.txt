@@ -1,0 +1,38 @@
+
+
+zu verwendenden Spalten:
+C,D,F,I,K,T 
+
+I -> eine Spalte siehe Mapping
+K -> zwei Spalten: Ticket-ID und Kommentar
+	wenn in K SOLI-XXXXX steht, dann diesen Wert in Spalte Ticket ID, sonst in Kommentar
+
+Mapping:
+01.01_Fachliche und Technische Analyse:Analyse
+02.01_Entwicklung:Entwicklung
+02.04_Bugfixing:Bugfix
+03.01_Organisatorisches Projektmanagement:PO/PL
+03.02_Technisches Projektmanagement:TP
+03.04_Testautomatisierung:TA
+03.05_Regressionstestset WebShop Platform:RG
+03.07_Solution_Support:solSup
+03.10_Build&Deployment releaseabhängig:BnD_release
+03.11_Build&Deployment releaseunabhängig:BnD_sonstiges
+03.12_Scrum Master:Scrum
+03.13_Sprintmeetings:Meeting
+02.03_Testing & QA:Test
+02.02_Dokumentation:Doku
+
+
+
+---------------------------------------------
+https://hub.docker.com/r/grafana/grafana/
+- aufsetzen
+- View: Gesamtstunden pro Tag
+- Tabelle: mit den Ticket-IDs mit der summierten Stundenzahl, sortiert nach den meisten
+  Bsp. SQL: "SELECT sum(aufwand) as aufwaende, ticketid FROM kontierung FROM TABELLE"
+
+mysql Datenbank
+daten eintragen
+T = Ticketid
+A ID

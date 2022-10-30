@@ -1,0 +1,14 @@
+services:
+  
+  php:
+    build:
+      context: ./php
+    volumes:
+      - ./app:/app
+  nginx:
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./app:/app
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf

@@ -1,0 +1,11 @@
+SELECT SUM(Aufwand) as Aufwände
+FROM sOliver;
+
+SELECT TicketID, SUM(Aufwand) 
+FROM  sOliver
+GROUP  by TicketID;
+
+SELECT Kommentar, SUM(Aufwand) 
+FROM  sOliver
+GROUP  by Kommentar;
+
